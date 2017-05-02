@@ -1,11 +1,25 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <!-- Base application theme. To find which attributes to override, cmd+click the parent to begin spelunking... -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <!-- This is the brand color (used in toolbar etc.) -->
+        <item name="colorPrimary">@color/red</item>
+        <!-- Statusbar, above the toolbar, slightly darker, used in Lollipop and higher, black otherwise -->
+        <item name="colorPrimaryDark">@color/dark_red</item>
+        <!-- Tint - in contrast to the primary color -->
+        <item name="colorAccent">@color/gray</item>
+        <!-- We must use the android prefix to override, cause this attribute is in the Android OS, outside the AppCompat scope -->
+        <item name="android:colorBackground">@color/soothing_blue</item>
+    </style>
+    
+    <style name="BeatBoxButton">
+        <item name="android:background">@color/dark_blue</item>
+    </style>
+
+    <!-- I can specify the parent instead of this naming style -->
+    <style name="BeatBoxButton.Strong">
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>
