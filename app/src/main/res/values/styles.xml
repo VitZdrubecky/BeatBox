@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <!-- Base application theme. To find which attributes to override, cmd+click the parent to begin spelunking... -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -11,10 +11,13 @@
         <item name="colorAccent">@color/gray</item>
         <!-- We must use the android prefix to override, cause this attribute is in the Android OS, outside the AppCompat scope -->
         <item name="android:colorBackground">@color/soothing_blue</item>
+        <!-- Override the parent attribute and make this style available throughout the app without touching the layouts -->
+        <!-- To include this attribute in a layout, we use the "?" notation to reference it -->
+        <item name="android:buttonStyle">@style/BeatBoxButton</item>
     </style>
-    
-    <style name="BeatBoxButton">
-        <item name="android:background">@color/dark_blue</item>
+
+    <style name="BeatBoxButton" parent="android:style/Widget.Holo.Button">
+        <item name="android:background">@drawable/button_beat_box</item>
     </style>
 
     <!-- I can specify the parent instead of this naming style -->
